@@ -43,12 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: File
-    uniqueID: 2214455167
+  - name: New Layer 1
+    uniqueID: 1417026235
     locked: 0
-  - name: Text
-    uniqueID: 3698931027
+  - name: New Layer 2
+    uniqueID: 3633374347
     locked: 0
-  - name: "\u0130saret"
-    uniqueID: 4125239659
+  - name: New Layer 3
+    uniqueID: 2910651805
+    locked: 0
+  - name: ui
+    uniqueID: 567253747
     locked: 0
