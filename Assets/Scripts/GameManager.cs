@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject dialog;
     public GameObject dialog2;
     public GameObject tpmenu;
-
+    int mal;
 
     void Start()
     {
