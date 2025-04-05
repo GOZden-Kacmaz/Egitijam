@@ -49,6 +49,10 @@ public class player : MonoBehaviour
         {
             GameManager.tpmenu.SetActive(true);
         }
+        else
+        {
+            GameManager.tpmenu.SetActive(false);
+        }
 
     }
 
