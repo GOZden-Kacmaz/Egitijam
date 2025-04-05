@@ -11,7 +11,7 @@ public class player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
-    [SerializeField] static bool ipucuvarmý = false;
+    
     public GameObject dialogmanager;
     public GameManager GameManager;
     void Start()
@@ -26,40 +26,26 @@ public class player : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        if (npcdegme == true && Input.GetKeyDown(KeyCode.E) && ipucuvarmý)
-        {
-            GameManager.kamera2.enabled = false;
-            GameManager.kamera3.enabled = true;
-            dialogmanager.SetActive(true);
-            if (GameManager.kamera1.enabled)
-            {
-                gameObject.SetActive(false);
-                
-                
-            }
-            else
-            {
-                gameObject.SetActive(true);
-            }
-        }
-        else if (npcdegme == true && Input.GetKeyDown(KeyCode.E))
+       
+        if (npcdegme == true && Input.GetKey(KeyCode.E))
         {
             GameManager.dialog.SetActive(true);
         }
-       
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            GameManager.tpmenu.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Tab))
+        { 
+            GameManager.tpmenu.SetActive(false);
+        }
 
     }
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("trigger") && Input.GetKeyDown(KeyCode.E))
-        {
-            Destroy(GameManager.ipucu);
-
-            ipucuvarmý = true;
-
-        }
+        
         if (collision.CompareTag("npc"))
         {
             npcdegme = true;
@@ -75,18 +61,9 @@ public class player : MonoBehaviour
             gameObject.SetActive(false);
 
         }
+       
 
-        if(collision.CompareTag("kapý"))
-        {
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                GameManager.tpmenu.SetActive(true);
-            }
-            if (Input.GetKeyUp(KeyCode.Tab))
-            {
-                GameManager.tpmenu.SetActive(false);
-            }
-        }
+       
 
 
     }

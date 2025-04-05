@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject dialog2;
     public GameObject tpmenu;
     
+    
 
     [SerializeField] private bool bulmacaa;
     [SerializeField] private bool[] ipucu1;
