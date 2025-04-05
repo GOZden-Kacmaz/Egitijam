@@ -45,6 +45,10 @@ public class player : MonoBehaviour
         {
             GameManager.dialog.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            GameManager.tpmenu.SetActive(true);
+        }
 
     }
 
