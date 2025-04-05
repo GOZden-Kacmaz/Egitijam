@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject ipucu;
     public GameObject dialog;
     public GameObject dialog2;
+    int mal;
 
     void Start()
     {
