@@ -46,14 +46,7 @@ public class player : MonoBehaviour
         {
             GameManager.dialog.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            GameManager.tpmenu.SetActive(true);
-        }
-        if (Input.GetKeyUp(KeyCode.Tab))
-        { 
-            GameManager.tpmenu.SetActive(false);
-        }
+       
 
     }
 
@@ -75,12 +68,24 @@ public class player : MonoBehaviour
         {
             npcdegme = false;
         }
-        if (collision.CompareTag("masa") && Input.GetKeyDown(KeyCode.E))
+        if (collision.CompareTag("masa") && Input.GetKey(KeyCode.E))
         {
             GameManager.kamera1.enabled = false;
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
 
+        }
+
+        if(collision.CompareTag("kapý"))
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                GameManager.tpmenu.SetActive(true);
+            }
+            if (Input.GetKeyUp(KeyCode.Tab))
+            {
+                GameManager.tpmenu.SetActive(false);
+            }
         }
 
 
