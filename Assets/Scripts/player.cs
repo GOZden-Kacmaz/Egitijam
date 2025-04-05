@@ -46,8 +46,13 @@ public class player : MonoBehaviour
         {
             GameManager.dialog.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            GameManager.tpmenu.SetActive(true);
+        }
 
     }
+
 
 
     private void OnTriggerStay2D(Collider2D collision)
