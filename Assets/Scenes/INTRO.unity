@@ -216,6 +216,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: sayfa.Array.data[10]
       value: 
       objectReference: {fileID: 5569506228371993241}
@@ -234,7 +238,75 @@ PrefabInstance:
       propertyPath: cumleler.Array.data[3]
       value: "Ama biri, ya\u015Fl\u0131 bir kad\u0131n, onun \xF6l\xFCm\xFCnden birka\xE7
         g\xFCn \xF6nce garip bir adamla konu\u015Ftu\u011Funu g\xF6rd\xFC\u011F\xFCn\xFC
-        s\xF6yledi."
+        s\xF6yledi.  \u201CKoyu renk bir palto giymi\u015Fti, y\xFCz\xFCn\xFC pek
+        g\xF6remedim,\u201D dedi kad\u0131n. \u201CAma Thomas\u2019la konu\u015Fuyordu,
+        sanki tart\u0131\u015F\u0131yor gibiydiler.\u201D "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[4]
+      value: "Bu yeni bir ipucuydu. Fakat elimde isim yoktu. Sadece belirsiz bir
+        siluet vard\u0131. Bu adam\u0131 bulmak i\xE7in Thomas\u2019\u0131n yak\u0131n
+        \xE7evresini ara\u015Ft\u0131rmaya karar verdim. Arkada\u015Flar\u0131ndan
+        biri, onun bir barda birka\xE7 kez ayn\u0131 adamla g\xF6r\xFCld\xFC\u011F\xFCn\xFC
+        s\xF6yledi. The Rusty Nail ad\u0131nda, eski bir liman kenar\u0131nda bulunan
+        k\xFC\xE7\xFCk bir bar\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[5]
+      value: "Bara gitti\u011Fimde i\xE7erisi olduk\xE7a sakindi. Barmenle sohbet
+        etmeye ba\u015Flad\u0131m ve Thomas hakk\u0131nda birka\xE7 soru sordum.
+        \u201CEvet, onu hat\u0131rl\u0131yorum,\u201D dedi barmen. \u201CBuraya s\u0131k
+        gelmezdi ama geldi\u011Finde hep ayn\u0131 adamla otururdu. Uzun boylu, solgun
+        tenli biriydi. Ad\u0131n\u0131 hi\xE7 sormad\u0131m ama genelde k\xF6\u015Fede
+        oturup i\xE7kisini yudumlard\u0131.\u201D  Adam\u0131n kim oldu\u011Funu
+        \xF6\u011Frenmem gerekiyordu. Bunun i\xE7in barmenin g\xFCvenini kazanmam
+        gerekiyordu. Birka\xE7 i\xE7ki \u0131smarlad\u0131m ve konu\u015Fmay\u0131
+        biraz daha ilerlettim. Nihayet barmen bana bir isim verdi: Jonathan Reed. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[6]
+      value: "Jonathan Reed,kim oldu\u011Fu hakk\u0131nda bir bilgi yoktu .Jonathan
+        Reed , Thomas ile neden bulu\u015Fmu\u015Ftu? Bu sorular\u0131n cevaplar\u0131n\u0131
+        bulmak i\xE7in daha fazla bilgiye ihtiyac\u0131m vard\u0131.  Elimde bilinmez
+        bir isim ile bir di\u011Fer cinayet mahalline gittim.  Buras\u0131 4 y\u0131l
+        \xF6nce \u015F\xFCpheli bir \u015Fekilde \xF6ld\xFCr\xFClen ve katili bulunamam\u0131\u015F
+        Joseph Anderson\u2019un eviydi. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[7]
+      value: "Ev bo\u015F ve kullan\u0131lm\u0131yor gibi g\xF6r\xFCl\xFCyordu. \u0130\xE7eri
+        girdi\u011Fimde bir \u015Feyler bulma umuduyla etrafta dola\u015Fmaya ba\u015Flad\u0131m.
+        Ortada eski bir masa duruyordu ve \xFCzerinde bir defter a\xE7\u0131kt\u0131.
+        Defterin sayfalar\u0131n\u0131 kar\u0131\u015Ft\u0131r\u0131rken tan\u0131d\u0131k
+        bir isim g\xF6z\xFCme \xE7arpt\u0131 \u201CJonathan Reed\u201D  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[8]
+      value: "Tam o anda telefonum \xE7ald\u0131. A\xE7t\u0131\u011F\u0131mda derin
+        bir sessizlik vard\u0131.Sonra  Kaba sert  bir ses konu\u015Ftu: \u201CPe\u015Fimi
+        b\u0131rak ve h\u0131zl\u0131ca  evine git.\u201D  T\xFCylerim diken diken
+        oldu. Eve do\u011Fru ko\u015Farken i\xE7imde k\xF6t\xFC bir his vard\u0131.
+        Kap\u0131y\u0131 a\xE7t\u0131\u011F\u0131mda g\xF6rd\xFC\u011F\xFCm manzara
+        d\xFCnyam\u0131 alt\xFCst etti. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[9]
+      value: "Kar\u0131m, yerde hareketsiz yat\u0131yordu.\u015Eok ve ac\u0131 i\xE7inde
+        akl\u0131m\u0131 yitirdim ve donakald\u0131m. Kap\u0131n\u0131n aral\u0131\u011F\u0131ndan
+        esen so\u011Fuk r\xFCzgar beni kendime getirdi ve h\u0131zl\u0131ca kar\u0131m\u0131n
+        yan\u0131na ko\u015Fup ya\u015Fay\u0131p ya\u015Famad\u0131\u011F\u0131n\u0131
+        kontrol ettim.Nabz\u0131 atm\u0131yordu.G\xF6zya\u015Flar\u0131m\u0131 tutamay\u0131p
+        kafam\u0131 kald\u0131rd\u0131m ve etraf\u0131ma bakmaya ba\u015Flad\u0131m.Fakat
+        hi\xE7bir \u015Fey yoktu.Polisi aray\u0131p kar\u0131m\u0131n cesedinin ba\u015F\u0131nda
+        beklemeye ba\u015Flad\u0131m. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 508278633986750045, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: cumleler.Array.data[10]
+      value: "O g\xFCn , her \u015Fey de\u011Fi\u015Fti. Art\u0131k adaleti arayan
+        bir dedektif de\u011Fildim.Sevgili kar\u0131m\u0131n intikam\u0131n\u0131
+        almak i\xE7in yan\u0131p tutu\u015Fan \xF6fkeli bir adamd\u0131m. Jonathan
+        Reed\u2019den intikam\u0131m\u0131 almak i\xE7in her\u015Feyimi feda etmeye
+        haz\u0131rd\u0131m. Fakat onu bulmak kolay olmayacakt\u0131. "
       objectReference: {fileID: 0}
     - target: {fileID: 736417434319768254, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,9 +356,45 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3131902592188560667, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 143.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -247
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015273635438118341, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 409
+      objectReference: {fileID: 0}
     - target: {fileID: 6203268514896015667, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: m_fontSize
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203268514896015667, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_margin.w
+      value: -74.89656
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203268514896015667, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_margin.y
+      value: 0.6423897
       objectReference: {fileID: 0}
     - target: {fileID: 6203268514896015667, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: m_fontSizeBase
@@ -294,7 +402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6687801791638428689, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1
+      value: -5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044552231407655788, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 162.72
       objectReference: {fileID: 0}
     - target: {fileID: 9109291676736889658, guid: a6caf3841b0b42e41a734c6463e1a442, type: 3}
       propertyPath: m_Name
