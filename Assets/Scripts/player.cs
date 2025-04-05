@@ -9,18 +9,13 @@ public class player : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    [SerializeField] bool npcdegme = false;
-    public GameObject dialog;
-    public GameObject dialog2;
-    public GameObject ipucu;
-    [SerializeField] bool ipucuvarmý = false;
-    public Camera kamera;
-    public Camera kamera1;
+    [SerializeField] static bool npcdegme = false;
+    [SerializeField] static bool ipucuvarmý = false;
     public GameObject dialogmanager;
+    public GameManager GameManager;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        kamera1.enabled = false;
     }
     void FixedUpdate()
     {
@@ -32,11 +27,10 @@ public class player : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if (npcdegme == true && Input.GetKeyDown(KeyCode.E) && ipucuvarmý)
         {
-            kamera.enabled = false;
-            kamera1.enabled = true;
-            dialog2.SetActive(true);
+            GameManager.kamera2.enabled = false;
+            GameManager.kamera3.enabled = true;
             dialogmanager.SetActive(true);
-            if (kamera1.enabled)
+            if (GameManager.kamera1.enabled)
             {
                 gameObject.SetActive(false);
                 
@@ -49,7 +43,7 @@ public class player : MonoBehaviour
         }
         else if (npcdegme == true && Input.GetKeyDown(KeyCode.E))
         {
-            dialog.SetActive(true);
+            GameManager.dialog.SetActive(true);
         }
 
     }
@@ -59,7 +53,7 @@ public class player : MonoBehaviour
     {
         if (collision.CompareTag("trigger") && Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(ipucu);
+            Destroy(GameManager.ipucu);
 
             ipucuvarmý = true;
 
@@ -78,7 +72,7 @@ public class player : MonoBehaviour
     {
         if (collision.CompareTag("npc")){
             npcdegme = false;
-            dialog.SetActive(false);
+            GameManager.dialog.SetActive(false);
         }
     }
 

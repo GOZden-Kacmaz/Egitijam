@@ -10,7 +10,7 @@ public class DialogScript : MonoBehaviour
     [SerializeField] private string[] cumleler;
     [SerializeField] private float yazmaHýzý =0.001f;
     private int index;
-    public player playerscript;
+    public GameManager gameManager;
     void Start()
     {
         StartCoroutine(Yaz());
@@ -33,9 +33,10 @@ public class DialogScript : MonoBehaviour
         }
         if (index == 4)
         {
-            playerscript.kamera1.enabled = false;
-            playerscript.kamera.enabled = true;
-            playerscript.gameObject.SetActive(true);
+            gameManager.kamera3.enabled = false;
+            gameManager.kamera2.enabled = true;
+            gameManager.PlayerScript.gameObject.SetActive(true);
+            index = 0;
         }
 
     }
