@@ -13,6 +13,7 @@ public class player : MonoBehaviour
     [SerializeField] static bool ipucuvarmý = false;
     public GameObject dialogmanager;
     public GameManager GameManager;
+    int mal;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

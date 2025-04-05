@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     public Camera kamera1;
     public Camera kamera2;
     public Camera kamera3;
+    public Camera kamera4;
     public GameObject ipucu;
     public GameObject dialog;
     public GameObject dialog2;
-    int mal;
+    public GameObject tpmenu;
+
 
     void Start()
     {
