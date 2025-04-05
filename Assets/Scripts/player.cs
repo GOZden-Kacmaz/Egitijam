@@ -30,6 +30,7 @@ public class player : MonoBehaviour
         {
             GameManager.kamera2.enabled = false;
             GameManager.kamera3.enabled = true;
+            GameManager.kamera4.enabled = false;
             dialogmanager.SetActive(true);
             if (GameManager.kamera1.enabled)
             {
