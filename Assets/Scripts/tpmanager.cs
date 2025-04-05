@@ -8,7 +8,7 @@ public class tpmanager : MonoBehaviour
     
     void Start()
     {
-
+        gamemanagersc.kamera4.enabled = false;
     }
 
     public void EvTP()
