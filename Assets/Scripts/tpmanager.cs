@@ -15,14 +15,23 @@ public class tpmanager : MonoBehaviour
     {
 
 
-        gamemanagersc.kamera1.enabled = false;
+        gamemanagersc.kamera4.enabled = false;
         gamemanagersc.kamera2.enabled = false;
         gamemanagersc.kamera3.enabled = false;
-        gamemanagersc.kamera4.enabled = true;
+        gamemanagersc.kamera1.enabled = true;
         gamemanagersc.tpmenu.SetActive(false);
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(32, -18, 0);
 
 
+    }
+    public void KarakolTP()
+    {
+        gamemanagersc.kamera1.enabled = false;
+        gamemanagersc.kamera2.enabled = false;
+        gamemanagersc.kamera3.enabled = true;
+        gamemanagersc.kamera4.enabled = false;
+        gamemanagersc.tpmenu.SetActive(false);
+        gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(26, -4, 0);
     }
 
 

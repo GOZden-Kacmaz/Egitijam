@@ -50,8 +50,8 @@ public class player : MonoBehaviour
         {
             GameManager.tpmenu.SetActive(true);
         }
-        else
-        {
+        if (Input.GetKeyUp(KeyCode.Tab))
+        { 
             GameManager.tpmenu.SetActive(false);
         }
 
@@ -75,7 +75,15 @@ public class player : MonoBehaviour
         {
             npcdegme = false;
         }
-        
+        if (collision.CompareTag("masa") && Input.GetKeyDown(KeyCode.E))
+        {
+            GameManager.kamera1.enabled = false;
+            GameManager.kamera4.enabled = true;
+            gameObject.SetActive(false);
+
+        }
+
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -84,5 +92,6 @@ public class player : MonoBehaviour
             GameManager.dialog.SetActive(false);
         }
     }
+   
 
 }
