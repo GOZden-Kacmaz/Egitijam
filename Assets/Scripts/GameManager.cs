@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             int index = i;
             buttons[i].onClick.AddListener(() => OnButtonClicked(index));
+            PlayerScript.gameObject.SetActive(false);
 
         }
     }
@@ -51,12 +53,15 @@ public class GameManager : MonoBehaviour
         ayakalk = hepsitruemi();
         if (Input.GetKeyDown(KeyCode.E)&& ayakalk)
         {
-            kamera1.enabled = false;
+            kamera1.enabled = true;
             kamera2.enabled = false;
             kamera3.enabled = false;
-            kamera4.enabled = true;
-
+            kamera4.enabled = true; PlayerScript.gameObject.SetActive(true);
+            PlayerScript.gameObject.transform.position = new Vector3(32, -18, 0);
+            ayakalk = false;
+           
         }
+        
 
     }
 }
