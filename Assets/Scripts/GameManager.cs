@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,33 +21,46 @@ public class GameManager : MonoBehaviour
     public GameObject bulmaca1;
     public GameObject bulmaca2;
     public bool dosyatake;
-  
 
+    public Button[] butonlar;
+    public GameObject[] plakalar;
+    public bool[] plaka;
 
     [SerializeField] private bool bulmacaa;
     [SerializeField] private bool[] ipucu1;
-    [SerializeField] private Button[] buttons;
+    [SerializeField] private Button[] bulmaca1buttons;
 
     public GameManager gameManager;
 
     public bool ayakalk;
-    private bool ayakalkKullanildi = false;  // Bu kontrolü ekliyoruz
+    private bool ayakalkKullanildi = false;
 
     private void Start()
     {
-        for (int i = 0; i < buttons.Length; i++)
+        // 1. bulmaca butonlarý
+        for (int i = 0; i < bulmaca1buttons.Length; i++)
         {
             int index = i;
-            buttons[i].onClick.AddListener(() => OnButtonClicked(index));
+            bulmaca1buttons[i].onClick.AddListener(() => OnBulmacaButtonClicked(index));
         }
 
-        // Baþlangýçta ipuçlarý false olsun
+        // 2. bulmaca butonlarý (PLAKA eþleþmesi DÜZELTÝLDÝ)
+        for (int i = 0; i < butonlar.Length; i++)
+        {
+            int index = i;
+            butonlar[i].onClick.AddListener(() => OnPlakaButtonClicked(index));
+        }
+
+        // Baþlangýçta tüm bool deðerlerini false yap
         for (int i = 0; i < ipucu1.Length; i++)
         {
             ipucu1[i] = false;
         }
 
-        
+        for (int i = 0; i < plaka.Length; i++)
+        {
+            plaka[i] = false;
+        }
     }
 
     public bool hepsitruemi()
@@ -61,7 +73,17 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private void OnButtonClicked(int index)
+    public bool plakahepsitruemi()
+    {
+        foreach (bool deger in plaka)
+        {
+            if (!deger)
+                return false;
+        }
+        return true;
+    }
+
+    private void OnBulmacaButtonClicked(int index)
     {
         if (index >= 0 && index < ipucu1.Length)
         {
@@ -69,35 +91,61 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void OnPlakaButtonClicked(int index)
     {
-        // Eðer daha önce ayakalk iþlemi yapýlmadýysa kontrol et
-        if (!ayakalkKullanildi)
+        if (index >= 0 && index < plaka.Length)
         {
-            ayakalk = hepsitruemi();
+            plaka[index] = true;
 
-            if (ayakalk && Input.GetKeyDown(KeyCode.E))
+            if (index < plakalar.Length)
             {
-                kamera4.enabled = false;
-                kamera2.enabled = false;
-                kamera3.enabled = false;
-                kamera1.enabled = true;
-                
-
-                PlayerScript.gameObject.SetActive(true);
-                PlayerScript.gameObject.transform.position = new Vector3(38.6f, -16.22f, 0);
-
-                // Artýk iþlem yapýldý, tekrar etmesin
-                ayakalkKullanildi = true;
-                ayakalk = false;
-
+                SpriteRenderer sr = plakalar[index].GetComponent<SpriteRenderer>();
+                if (sr != null)
+                {
+                    sr.sortingOrder = 500;
+                }
             }
         }
-        if (dosyatake==true)
+    }
+
+
+    private void KameraVeOyuncuAktifEt()
+    {
+        kamera1.enabled = true;
+        kamera2.enabled = false;
+        kamera3.enabled = false;
+        kamera4.enabled = false;
+
+        PlayerScript.gameObject.SetActive(true);
+        PlayerScript.gameObject.transform.position = new Vector3(38.6f, -16.22f, 0);
+
+        ayakalkKullanildi = true;
+        ayakalk = false;
+    }
+
+    void Update()
+    {
+        if (!ayakalkKullanildi)
+        {
+            // 1. bulmaca bitince
+            if (!dosyatake && hepsitruemi() && Input.GetKeyDown(KeyCode.E))
+            {
+                KameraVeOyuncuAktifEt();
+            }
+            // 2. bulmaca (plaka) bitince
+            else if (dosyatake && plakahepsitruemi() && Input.GetKeyDown(KeyCode.E))
+            {
+                KameraVeOyuncuAktifEt();
+            }
+        }
+
+        // 1. bulmaca tamamlandýysa 2. bulmaca baþlasýn
+        if (dosyatake)
         {
             bulmaca1.SetActive(false);
             bulmaca2.SetActive(true);
-
+            ayakalk = false;
+            ayakalkKullanildi = false;
         }
     }
 }

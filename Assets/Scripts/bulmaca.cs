@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickToTopManager : MonoBehaviour
 {
     public GameObject[] nesneler; // 5 nesne burada atanacak
+    public Button[] butonlar;
+    public GameObject[] plakalar;
+    public bool[] plaka;
 
     void Start()
     {
@@ -31,4 +35,6 @@ public class ClickToTopManager : MonoBehaviour
         if (srClicked != null)
             srClicked.sortingOrder = 10;
     }
+    
+    
 }

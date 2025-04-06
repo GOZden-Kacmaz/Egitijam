@@ -85,7 +85,6 @@ public class player : MonoBehaviour
         }
         if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E)&& kapýsc.final==true)
         {
-
             SceneManager.LoadScene(4);
         }
             
