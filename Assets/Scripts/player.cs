@@ -122,7 +122,11 @@ public class player : MonoBehaviour
         if (collision.CompareTag("kapý1"))
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             kapý.kapical = true;  kapý.kapilarindex = 0;
+=======
+            kapý.kapical = true;    kapý.kapilarindex = 0;
+>>>>>>> Stashed changes
 =======
             kapý.kapical = true;    kapý.kapilarindex = 0;
 >>>>>>> Stashed changes
