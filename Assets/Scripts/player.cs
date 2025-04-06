@@ -70,6 +70,12 @@ public class player : MonoBehaviour
             GameManager.kamera1.enabled = false;
             gameObject.transform.position = new Vector3(16.78f, 2, 0);
         }
+        if (collision.gameObject.CompareTag("Kapý"))
+        {
+            GameManager.kamera3.enabled = false;
+            GameManager.kamera1.enabled = true;
+            gameObject.transform.position = new Vector3(-1.79f, -2, 0);
+        }
         if (collision.CompareTag("dosya"))
         {
             GameManager.dosyatake = true;
