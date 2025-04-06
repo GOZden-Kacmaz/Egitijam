@@ -4,9 +4,6 @@ using UnityEngine.UI;
 public class ClickToTopManager : MonoBehaviour
 {
     public GameObject[] nesneler; // 5 nesne burada atanacak
-    public Button[] butonlar;
-    public GameObject[] plakalar;
-    public bool[] plaka;
 
     void Start()
     {

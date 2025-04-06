@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     public Camera kamera1;
     public Camera kamera3;
     public Camera kamera4;
-    public GameObject ipucu;
-    public GameObject ipucu2;
-    public GameObject ipucu2tab;
     public GameObject dialog;
     public GameObject dialog2;
     public GameObject tpmenu;
@@ -125,7 +122,7 @@ public class GameManager : MonoBehaviour
         kamera4.enabled = false;
 
         PlayerScript.gameObject.SetActive(true);
-        PlayerScript.gameObject.transform.position = new Vector3(38.6f, -16.22f, 0);
+        PlayerScript.gameObject.transform.position = new Vector3(-2.26f,-2.61f, 0);
 
         ayakalkKullanildi = true;
         ayakalk = false;

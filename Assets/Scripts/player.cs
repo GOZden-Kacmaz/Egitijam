@@ -12,7 +12,6 @@ public class player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
-    private bool kapýtemas = false;
     public GameObject etuþu;
     private bool kitablýktemas;
 
@@ -37,19 +36,6 @@ public class player : MonoBehaviour
         {
             GameManager.dialog.SetActive(true);
             GameManager.dialog2.SetActive(true);
-        }
-        if (kapýtemas)
-        {
-
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                GameManager.tpmenu.SetActive(true);
-
-            }
-            if (Input.GetKeyUp(KeyCode.Tab))
-            {
-                GameManager.tpmenu.SetActive(false);
-            }
         }
 
         if(kitablýktemas==true && Input.GetKeyDown(KeyCode.E))
@@ -76,19 +62,18 @@ public class player : MonoBehaviour
             GameManager.kamera1.enabled = false;
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
-            Destroy(GameManager.ipucu);
-            GameManager.ipucu2.SetActive(true);
             
         }
-
+        if (collision.gameObject.CompareTag("kapý"))
+        {   
+            GameManager.kamera3.enabled = true;
+            GameManager.kamera1.enabled = false;
+            gameObject.transform.position = new Vector3(16.78f, 2, 0);
+        }
         if (collision.CompareTag("dosya"))
         {
             GameManager.dosyatake = true;
             Destroy(GameManager.dosya);
-        }
-        if (collision.CompareTag("ipucu2"))
-        {
-            GameManager.ipucu2tab.SetActive(true);
         }
         if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E)&& kapýsc.final==true)
         {
@@ -102,11 +87,7 @@ public class player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("kapý"))
-        {
-
-            kapýtemas = true;
-        }
+        
         if(collision.gameObject.CompareTag("kitaplýk"))
         {
             etuþu.SetActive(true);
@@ -118,10 +99,6 @@ public class player : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("kapý"))
-        {
-            kapýtemas = false;
-        }
         if (collision.gameObject.CompareTag("kitaplýk"))
         {
             etuþu.SetActive(false);
@@ -151,10 +128,6 @@ public class player : MonoBehaviour
         {
             kapý.kapical = false;
 
-        }
-        if (collision.CompareTag("ipucu2"))
-        {
-            GameManager.ipucu2tab.SetActive(false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
