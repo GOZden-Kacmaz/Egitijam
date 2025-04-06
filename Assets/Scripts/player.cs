@@ -121,15 +121,15 @@ public class player : MonoBehaviour
     {
         if (collision.CompareTag("kapý1"))
         {
-            kapý.kapical = true;    kapý.kapilarindex = 1;
+            kapý.kapical = true;  kapý.kapilarindex = 0;
         }
         if (collision.CompareTag("kapý2"))
         {
-            kapý.kapical = true; kapý.kapilarindex = 2;
+            kapý.kapical = true; kapý.kapilarindex = 1;
         }
-        if (collision.CompareTag("kapý1"))
+        if (collision.CompareTag("kapý3"))
         {
-            kapý.kapical = true; kapý.kapilarindex = 3;
+            kapý.kapical = true; kapý.kapilarindex = 2;
         }
     }
 }
