@@ -5,85 +5,69 @@ using TMPro;
 
 public class final : MonoBehaviour
 {
-     [SerializeField] GameObject[] sayfa;
+    [SerializeField] GameObject[] sayfa;
     public Transform kamera;
     public Transform text;
     [SerializeField] private TMP_Text DialogText;
     [SerializeField] private string[] cumleler;
     [SerializeField] private float yazmaHýzý = 0.001f;
-    private int index;
+
+    private int index = 0;
+    private int aktifSayfaIndex = 0;
+    private bool yaziyorMu = false;
+
     void Start()
     {
         StartCoroutine(Yaz());
     }
+
     IEnumerator Yaz()
     {
+        yaziyorMu = true;
+        DialogText.text = "";
+
         foreach (char harf in cumleler[index].ToCharArray())
         {
             DialogText.text += harf;
             yield return new WaitForSeconds(yazmaHýzý);
         }
+
+        yaziyorMu = false;
     }
-    private int aktifSayfaIndex = 1;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))       {
-            index++;
-            DialogText.text = "";
-            StartCoroutine(Yaz());
-        }
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !yaziyorMu)
         {
-            if (sayfa.Length == 0) return;
-            
-            if (aktifSayfaIndex == 1)
-            {
-                
-            }
-            if (aktifSayfaIndex == 2)
-            {
-                kamera.position = new Vector3(17.88f, 5.5f, -10);
-                
-            }
-            if (aktifSayfaIndex == 3)
-            {
-                kamera.position = new Vector3(36.45f, 5.5f, -10);
-            }
-            if (aktifSayfaIndex == 4)
-            {
-                kamera.position = new Vector3(54.76f, 5.5f, -10);
-            }
-            //if (aktifSayfaIndex == 5)
-            //{
-            //    kamera.position = new Vector3(72.57f, 5.5f, -10);
-            //}
-            //if (aktifSayfaIndex == 6)
-            //{
-            //    kamera.position = new Vector3(91.24f, 5.5f, -10);
-            //}
-            //if (aktifSayfaIndex == 7)
-            //{
-            //    kamera.position = new Vector3(109.6f, 5.5f, -10);
-            //}
-            //if (aktifSayfaIndex == 8)
-            //{
-            //    kamera.position = new Vector3(128.22f, 5.5f, -10);
-            //}
-            //if (aktifSayfaIndex == 9)
-            //{
-            //    kamera.position = new Vector3(143.91f, 5.5f, -10);
-            //}
-            //if (aktifSayfaIndex == 10)
-            //{
-            //    kamera.position = new Vector3(163.15f, 5.5f, -10);
-            //}
-            //aktifSayfaIndex = (aktifSayfaIndex + 1);
-            //if (aktifSayfaIndex > sayfa.Length)
-            //{
+            index++;
+            aktifSayfaIndex++;
 
-            //}
+            if (index < cumleler.Length)
+            {
+                StartCoroutine(Yaz());
+            }
+
+            if (aktifSayfaIndex < sayfa.Length)
+            {
+                KameraKonumGuncelle(aktifSayfaIndex);
+            }
+        }
+    }
+
+    void KameraKonumGuncelle(int index)
+    {
+        switch (index)
+        {
+            
+            case 2:
+                kamera.position = new Vector3(19.82f, 0, -10);
+                break;
+            case 3:
+                kamera.position = new Vector3(42.3f, 0, -10);
+                break;
+            case 4:
+                kamera.position = new Vector3(60.95f, 0, -10);
+                break;
         }
     }
 }
