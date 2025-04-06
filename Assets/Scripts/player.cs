@@ -11,6 +11,8 @@ public class player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
+    private bool kapýtemas = false;
+    
     
     public GameObject dialogmanager;
     public GameManager GameManager;
@@ -30,14 +32,20 @@ public class player : MonoBehaviour
         if (npcdegme == true && Input.GetKey(KeyCode.E))
         {
             GameManager.dialog.SetActive(true);
+            GameManager.dialog2.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (kapýtemas)
         {
-            GameManager.tpmenu.SetActive(true);
-        }
-        if (Input.GetKeyUp(KeyCode.Tab))
-        { 
-            GameManager.tpmenu.SetActive(false);
+           
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                GameManager.tpmenu.SetActive(true);
+                
+            }
+            if (Input.GetKeyUp(KeyCode.Tab))
+            {
+                GameManager.tpmenu.SetActive(false);
+            }
         }
 
     }
@@ -59,14 +67,34 @@ public class player : MonoBehaviour
             GameManager.kamera1.enabled = false;
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
-
         }
-       
-
-       
+        
+        if (collision.CompareTag("dosya"))
+        {
+            GameManager.dosyatake = true;
+           Destroy(GameManager.dosya);
+        }
 
 
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("kapý"))
+        {
+
+            kapýtemas = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("kapý"))
+        {
+            kapýtemas = false;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("npc")){

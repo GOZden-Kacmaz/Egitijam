@@ -21,7 +21,7 @@ public class tpmanager : MonoBehaviour
         gamemanagersc.kamera1.enabled = true;
         
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(45, -14, 0);
-
+        gamemanagersc.tpmenu.SetActive(false);
 
     }
     public void KarakolTP()
@@ -34,6 +34,7 @@ public class tpmanager : MonoBehaviour
         gamemanagersc.kamera1.enabled = false;
           
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(35.5f, 0.25f, 0);
+        gamemanagersc.tpmenu.SetActive(false);
     }
 
 

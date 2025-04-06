@@ -6,6 +6,10 @@ TagManager:
   tags:
   - trigger
   - npc
+  - masa
+  - "kap\u0131"
+  - dosya
+  - "kap\u01311"
   layers:
   - Default
   - TransparentFX
@@ -43,10 +47,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: ev
     uniqueID: 1417026235
     locked: 0
-  - name: New Layer 2
+  - name: karakter
     uniqueID: 3633374347
     locked: 0
   - name: New Layer 3
@@ -54,4 +58,19 @@ TagManager:
     locked: 0
   - name: ui
     uniqueID: 567253747
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 2095685969
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 1205422905
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 1161007885
+    locked: 0
+  - name: New Layer 8
+    uniqueID: 1459316927
+    locked: 0
+  - name: New Layer 9
+    uniqueID: 1285661839
     locked: 0

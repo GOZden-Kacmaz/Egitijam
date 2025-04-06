@@ -16,8 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject dialog;
     public GameObject dialog2;
     public GameObject tpmenu;
-    
-    
+    public GameObject dosya;
+    public GameObject bulmaca1;
+    public GameObject bulmaca2;
+    public bool dosyatake;
+  
+
 
     [SerializeField] private bool bulmacaa;
     [SerializeField] private bool[] ipucu1;
@@ -86,6 +90,12 @@ public class GameManager : MonoBehaviour
                 ayakalk = false;
 
             }
+        }
+        if (dosyatake==true)
+        {
+            bulmaca1.SetActive(false);
+            bulmaca2.SetActive(true);
+
         }
     }
 }

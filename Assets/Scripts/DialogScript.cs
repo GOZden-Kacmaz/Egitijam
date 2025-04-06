@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,36 +7,55 @@ public class DialogScript : MonoBehaviour
 {
     [SerializeField] private TMP_Text DialogText;
     [SerializeField] private string[] cumleler;
-    [SerializeField] private float yazmaHýzý =0.001f;
+    [SerializeField] private float yazmaHýzý = 0.05f;
     private int index;
+
     public GameManager gameManager;
+
+    private bool yaziyorMu = false;
+
     void Start()
     {
+        gameObject.SetActive(false); // Baþta görünmesin
+    }
+
+    public void Baslat()
+    {
+        index = 0;
+        DialogText.text = "";
         StartCoroutine(Yaz());
     }
+
     IEnumerator Yaz()
     {
-        foreach(char harf in cumleler[index].ToCharArray())
+        yaziyorMu = true;
+        DialogText.text = "";
+
+        foreach (char harf in cumleler[index])
         {
             DialogText.text += harf;
             yield return new WaitForSeconds(yazmaHýzý);
         }
+
+        yaziyorMu = false;
     }
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !yaziyorMu)
         {
             index++;
-            DialogText.text = "";
-            StartCoroutine(Yaz());
-        }
-        if (index == 4)
-        {
-            gameManager.kamera3.enabled = false;
-            gameManager.kamera2.enabled = true;
-            gameManager.PlayerScript.gameObject.SetActive(true);
-            index = 0;
+
+            if (index < cumleler.Length)
+            {
+                StartCoroutine(Yaz());
+            }
         }
 
+        if (index >= cumleler.Length)
+        {
+            gameManager.dialog.SetActive(false); // Diyalog panelini kapat
+            gameObject.SetActive(false);         // Diyalog script objesini de gizle
+        }
     }
 }
