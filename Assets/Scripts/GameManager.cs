@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public player PlayerScript;
     public DialogScript dialogScript;
     public Camera kamera1;
-    
     public Camera kamera3;
     public Camera kamera4;
     public GameObject ıpucu;
@@ -23,6 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject bulmaca2;
     public AudioSource ambience;
     public bool dosyatake;
+  
   
 
 
