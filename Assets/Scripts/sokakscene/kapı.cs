@@ -17,7 +17,10 @@ public class kapı : MonoBehaviour
     private int index;
     public player player;
 
-
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
