@@ -12,8 +12,8 @@ public class player : MonoBehaviour
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
     private bool kapýtemas = false;
-    
-    
+
+
     public GameObject dialogmanager;
     public GameManager GameManager;
     void Start()
@@ -28,7 +28,7 @@ public class player : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-       
+
         if (npcdegme == true && Input.GetKey(KeyCode.E))
         {
             GameManager.dialog.SetActive(true);
@@ -36,11 +36,11 @@ public class player : MonoBehaviour
         }
         if (kapýtemas)
         {
-           
+
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 GameManager.tpmenu.SetActive(true);
-                
+
             }
             if (Input.GetKeyUp(KeyCode.Tab))
             {
@@ -53,7 +53,7 @@ public class player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
         if (collision.CompareTag("npc"))
         {
             npcdegme = true;
@@ -68,11 +68,11 @@ public class player : MonoBehaviour
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
         }
-        
+
         if (collision.CompareTag("dosya"))
         {
             GameManager.dosyatake = true;
-           Destroy(GameManager.dosya);
+            Destroy(GameManager.dosya);
         }
 
 
@@ -97,14 +97,15 @@ public class player : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("npc")){
+        if (collision.CompareTag("npc"))
+        {
             npcdegme = false;
             GameManager.dialog.SetActive(false);
         }
         if (collision.CompareTag("kapý1"))
         {
-        kapý.kapical = false;
-        
+            kapý.kapical = false;
+
         }
         if (collision.CompareTag("kapý2"))
         {
@@ -121,27 +122,18 @@ public class player : MonoBehaviour
     {
         if (collision.CompareTag("kapý1"))
         {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            kapý.kapical = true;  kapý.kapilarindex = 0;
-=======
-            kapý.kapical = true;    kapý.kapilarindex = 0;
->>>>>>> Stashed changes
-=======
-            kapý.kapical = true;    kapý.kapilarindex = 0;
->>>>>>> Stashed changes
-=======
-            kapý.kapical = true;    kapý.kapilarindex = 0;
->>>>>>> Stashed changes
+            kapý.kapical = true; kapý.kapilarindex = 0;
+
+            
         }
         if (collision.CompareTag("kapý2"))
         {
-            kapý.kapical = true; kapý.kapilarindex = 1;
+                kapý.kapical = true; kapý.kapilarindex = 1;
         }
         if (collision.CompareTag("kapý3"))
         {
             kapý.kapical = true; kapý.kapilarindex = 2;
         }
+    
     }
 }
