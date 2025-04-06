@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     public float moveSpeed = 5f;
+
     private Rigidbody2D rb;
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
@@ -15,6 +16,7 @@ public class player : MonoBehaviour
 
 
     public GameObject dialogmanager;
+    public kapý kapýsc;
     public GameManager GameManager;
     void Start()
     {
@@ -81,9 +83,10 @@ public class player : MonoBehaviour
         {
             GameManager.ýpucu2tab.SetActive(true);
         }
-        if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E))
+        if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E)&& kapýsc.final==true)
         {
-            SceneManager.LoadScene("katilev");
+
+            SceneManager.LoadScene(4);
         }
             
 

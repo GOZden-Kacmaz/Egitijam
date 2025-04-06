@@ -6,7 +6,7 @@ public class kapı : MonoBehaviour
 {
     public static int kapilarindex;
     public static bool kapical = false;
-
+    public bool final = false;
     public GameObject[] dialog;
     [SerializeField] private Transform kamera;
     [SerializeField] private TMP_Text[] DialogText;
@@ -58,6 +58,7 @@ public class kapı : MonoBehaviour
                     dialog[2].SetActive(true);
                     kamera.position = new Vector3(43.58f, -11.69f, kamera.position.z);
                     StartCoroutine(KapiYaz(kapi3cumle, 2));
+                    final= true;
                     break;
             }
         }
