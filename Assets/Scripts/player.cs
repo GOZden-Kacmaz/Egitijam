@@ -123,7 +123,11 @@ public class player : MonoBehaviour
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             kapý.kapical = true;  kapý.kapilarindex = 0;
+=======
+            kapý.kapical = true;    kapý.kapilarindex = 0;
+>>>>>>> Stashed changes
 =======
             kapý.kapical = true;    kapý.kapilarindex = 0;
 >>>>>>> Stashed changes
