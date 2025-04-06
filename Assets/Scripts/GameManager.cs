@@ -9,18 +9,19 @@ public class GameManager : MonoBehaviour
     public player PlayerScript;
     public DialogScript dialogScript;
     public Camera kamera1;
-    public Camera kamera2;
+    
     public Camera kamera3;
     public Camera kamera4;
-    public GameObject ýpucu;
-    public GameObject ýpucu2;
-    public GameObject ýpucu2tab;
+    public GameObject Ä±pucu;
+    public GameObject Ä±pucu2;
+    public GameObject Ä±pucu2tab;
     public GameObject dialog;
     public GameObject dialog2;
     public GameObject tpmenu;
     public GameObject dosya;
     public GameObject bulmaca1;
     public GameObject bulmaca2;
+    public AudioSource ambience;
     public bool dosyatake;
   
 
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     public GameManager gameManager;
 
     public bool ayakalk;
-    private bool ayakalkKullanildi = false;  // Bu kontrolü ekliyoruz
+    private bool ayakalkKullanildi = false;  // Bu kontrolï¿½ ekliyoruz
 
     private void Start()
     {
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
             buttons[i].onClick.AddListener(() => OnButtonClicked(index));
         }
 
-        // Baþlangýçta ipuçlarý false olsun
+        // Baï¿½langï¿½ï¿½ta ipuï¿½larï¿½ false olsun
         for (int i = 0; i < ipucu1.Length; i++)
         {
             ipucu1[i] = false;
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Eðer daha önce ayakalk iþlemi yapýlmadýysa kontrol et
+        // Eï¿½er daha ï¿½nce ayakalk iï¿½lemi yapï¿½lmadï¿½ysa kontrol et
         if (!ayakalkKullanildi)
         {
             ayakalk = hepsitruemi();
@@ -79,7 +80,7 @@ public class GameManager : MonoBehaviour
             if (ayakalk && Input.GetKeyDown(KeyCode.E))
             {
                 kamera4.enabled = false;
-                kamera2.enabled = false;
+              
                 kamera3.enabled = false;
                 kamera1.enabled = true;
                 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
                 PlayerScript.gameObject.SetActive(true);
                 PlayerScript.gameObject.transform.position = new Vector3(38.6f, -16.22f, 0);
 
-                // Artýk iþlem yapýldý, tekrar etmesin
+                // Artï¿½k iï¿½lem yapï¿½ldï¿½, tekrar etmesin
                 ayakalkKullanildi = true;
                 ayakalk = false;
 

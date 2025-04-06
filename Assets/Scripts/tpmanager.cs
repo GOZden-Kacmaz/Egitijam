@@ -5,6 +5,7 @@ using UnityEngine;
 public class tpmanager : MonoBehaviour
 {
     public GameManager gamemanagersc;
+
     
     void Start()
     {
@@ -16,27 +17,26 @@ public class tpmanager : MonoBehaviour
 
 
         gamemanagersc.kamera4.enabled = false;
-        gamemanagersc.kamera2.enabled = false;
+        
         gamemanagersc.kamera3.enabled = false;
         gamemanagersc.kamera1.enabled = true;
         
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(45, -14, 0);
         gamemanagersc.tpmenu.SetActive(false);
+        gamemanagersc.ambience.enabled = false;
 
     }
     public void KarakolTP()
     {
 
         gamemanagersc.kamera4.enabled = false;
-        gamemanagersc.kamera2.enabled = false;
-       
         gamemanagersc.kamera3.enabled=true;
         gamemanagersc.kamera1.enabled = false;
           
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(35.5f, 0.25f, 0);
         gamemanagersc.tpmenu.SetActive(false);
-        gamemanagersc.ýpucu2.SetActive(false);
-       
+        gamemanagersc.Ä±pucu2.SetActive(false);
+        gamemanagersc.ambience.enabled = true;
     }
 
 
