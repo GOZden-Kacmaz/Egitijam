@@ -21,7 +21,7 @@ public class tpmanager : MonoBehaviour
         gamemanagersc.kamera3.enabled = false;
         gamemanagersc.kamera1.enabled = true;
         
-        gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(45, -14, 0);
+        gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(-3.36f, -2.87f, 0);
         gamemanagersc.tpmenu.SetActive(false);
         gamemanagersc.ambience.enabled = false;
 
@@ -33,7 +33,7 @@ public class tpmanager : MonoBehaviour
         gamemanagersc.kamera3.enabled=true;
         gamemanagersc.kamera1.enabled = false;
           
-        gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(35.5f, 0.25f, 0);
+        gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(16.67f, 2f, 0);
         gamemanagersc.tpmenu.SetActive(false);
         gamemanagersc.ipucu2.SetActive(false);
         gamemanagersc.ambience.enabled = true;

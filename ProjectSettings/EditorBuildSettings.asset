@@ -4,41 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
   m_Scenes: []
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> acb38af58f44443373080c7d823c6b4541c1d377
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/anamenu.unity
-    guid: 3e0769c1c2a602140a2574e2a2c8a0a3
-  - enabled: 1
-    path: Assets/Scenes/INTRO.unity
-    guid: 6ec7531df4ac23646b557a8e4e135343
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/sahne 1.unity
-=======
-    path: Assets/Scenes/Ev.unity
->>>>>>> acb38af58f44443373080c7d823c6b4541c1d377
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/sokakScene.unity
-    guid: e66430c4bff7778428611f9d329a5e87
-  - enabled: 1
-    path: Assets/Scenes/katilev.unity
-    guid: d82d1dea19da4074aaba120969947da0
-<<<<<<< HEAD
-  - enabled: 1
-    path: Assets/Scenes/final.unity
-    guid: 3a5aeded5a241b741a237831d8f756c0
-=======
-=======
-  m_Scenes: []
->>>>>>> 5863d15acdb5a2c9895e782d371160adaa12b9f7
->>>>>>> acb38af58f44443373080c7d823c6b4541c1d377
->>>>>>> 09b2f0cda1df6f6742f208e130750789ec3c5b33
   m_configObjects: {}
