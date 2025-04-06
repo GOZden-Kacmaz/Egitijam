@@ -11,32 +11,34 @@ public class Intro : MonoBehaviour
     public Transform text;
     [SerializeField] private TMP_Text DialogText;
     [SerializeField] private string[] cumleler;
-    [SerializeField] private float yazmaHýzý = 0.001f;
+    [SerializeField] private float yazmaHÄ±zÄ± = 0.001f;
     private int index;
+    bool metinBittimi=false;
     void Start()
     {
         StartCoroutine(Yaz());
     }
     IEnumerator Yaz()
     {
+        metinBittimi=false;
         foreach (char harf in cumleler[index].ToCharArray())
         {
             DialogText.text += harf;
-            yield return new WaitForSeconds(yazmaHýzý);
+            yield return new WaitForSeconds(yazmaHÄ±zÄ±);
         }
+        metinBittimi=true;
     }
     private int aktifSayfaIndex = 1;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))       {
+
+        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))&&metinBittimi)
+        {
             index++;
             DialogText.text = "";
             StartCoroutine(Yaz());
-        }
 
-        if (Input.GetMouseButtonDown(0))
-        {
             if (sayfa.Length == 0) return;
             
             if (aktifSayfaIndex == 1)
