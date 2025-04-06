@@ -121,7 +121,11 @@ public class player : MonoBehaviour
     {
         if (collision.CompareTag("kapý1"))
         {
+<<<<<<< Updated upstream
             kapý.kapical = true;  kapý.kapilarindex = 0;
+=======
+            kapý.kapical = true;    kapý.kapilarindex = 0;
+>>>>>>> Stashed changes
         }
         if (collision.CompareTag("kapý2"))
         {
