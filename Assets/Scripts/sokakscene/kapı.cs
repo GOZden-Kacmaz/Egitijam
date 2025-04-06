@@ -12,13 +12,17 @@ public class kapı : MonoBehaviour
     [SerializeField] private TMP_Text[] DialogText;
     [SerializeField] private string[] kapi1cumle;
     [SerializeField] private string[] kapi2cumle;
-    [SerializeField] private string[] kapi3cumle;
     [SerializeField] private float yazmaHızı = 0.05f;
     private int index;
     public player player;
+    public KameraManager KameraScript;
 
     private void Start()
     {
+        for (int i =0; i == dialog.Length; i++)
+        {
+            dialog[i].SetActive(false);
+        }
         
     }
 
@@ -27,73 +31,45 @@ public class kapı : MonoBehaviour
         // Kapıya yaklaşıldıysa ve E tuşuna basıldıysa
         if (kapical && Input.GetKeyDown(KeyCode.E) && kapilarindex == 0)
         {
+            KameraScript.karakterAktif = false;
             dialog[0].SetActive(true);
-            
-            kamera.position = new Vector3(1.32314f, -14.8703f,kamera.position.z);
+            kamera.position = new Vector3(0.8f, -11.35f, kamera.position.z);
             player.gameObject.SetActive(false);
-            if (Input.GetMouseButtonDown(0) && kapical && kapilarindex == 1)
+            index++;
+            if (index < kapi1cumle.Length)
             {
-                index++;
-
-                if (index < kapi1cumle.Length)
-                {
                     StartCoroutine(kapi1yaz());
-                }
             }
-
             if (index >= kapi1cumle.Length)
             {
                 dialog[0].SetActive(false);
                 kamera.position = new Vector3();
                 player.gameObject.SetActive(true);
+                KameraScript.karakterAktif = true;
             }
         }
        
         if (kapical && Input.GetKeyDown(KeyCode.E) && kapilarindex == 1)
         {
+            KameraScript.karakterAktif = false;
             dialog[1].SetActive(true);
-            kamera.position = new Vector3(20.26f, -14.8703f, kamera.position.z);
+            kamera.position = new Vector3(19.74f, -11.35f, kamera.position.z);
             player.gameObject.SetActive(false);
-            if (Input.GetMouseButtonDown(0) && kapical && kapilarindex == 1)
+            index++;
+            if (index < kapi2cumle.Length)
             {
-                index++;
-
-                if (index < kapi2cumle.Length)
-                {
-                    StartCoroutine(kapi2yaz());
-                }
+                StartCoroutine(kapi2yaz());
             }
-
             if (index >= kapi2cumle.Length)
             {
                 dialog[1].SetActive(false);
                 kamera.position = new Vector3();
                 player.gameObject.SetActive(true);
+                KameraScript.karakterAktif = true;
             }
         }
        
-        if (kapical && Input.GetKeyDown(KeyCode.E) && kapilarindex == 2)
-        {
-            dialog[2].SetActive(true);
-            kamera.position = new Vector3(20.26f, -14.8703f, kamera.position.z);
-            player.gameObject.SetActive(false);
-            if (Input.GetMouseButtonDown(0) && kapical && kapilarindex == 1)
-            {
-                index++;
-
-                if (index < kapi3cumle.Length)
-                {
-                    StartCoroutine(kapi3yaz());
-                }
-            }
-
-            if (index >= kapi3cumle.Length)
-            {
-                dialog[2].SetActive(false);  //dialog panelini kapat
-                kamera.position = new Vector3();
-                player.gameObject.SetActive(true);
-            }
-        }
+       
       
         
     }
@@ -114,17 +90,6 @@ public class kapı : MonoBehaviour
         foreach (char harf in kapi2cumle[index])
         {
             DialogText[2].text += harf;
-            yield return new WaitForSeconds(yazmaHızı);
-        }
-    }
-
-    IEnumerator kapi3yaz()
-    {
-        DialogText[2].text = "";
-
-        foreach (char harf in kapi3cumle[index])
-        {
-            DialogText[3].text += harf;
             yield return new WaitForSeconds(yazmaHızı);
         }
     }
