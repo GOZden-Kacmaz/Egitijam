@@ -67,12 +67,19 @@ public class player : MonoBehaviour
             GameManager.kamera1.enabled = false;
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
+            Destroy(GameManager.ýpucu);
+            GameManager.ýpucu2.SetActive(true);
+            
         }
 
         if (collision.CompareTag("dosya"))
         {
             GameManager.dosyatake = true;
             Destroy(GameManager.dosya);
+        }
+        if (collision.CompareTag("ipucu2"))
+        {
+            GameManager.ýpucu2tab.SetActive(true);
         }
 
 
@@ -116,6 +123,10 @@ public class player : MonoBehaviour
         {
             kapý.kapical = false;
 
+        }
+        if (collision.CompareTag("ipucu2"))
+        {
+            GameManager.ýpucu2tab.SetActive(false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

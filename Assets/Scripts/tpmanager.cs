@@ -35,6 +35,8 @@ public class tpmanager : MonoBehaviour
           
         gamemanagersc.PlayerScript.gameObject.transform.position = new Vector3(35.5f, 0.25f, 0);
         gamemanagersc.tpmenu.SetActive(false);
+        gamemanagersc.ýpucu2.SetActive(false);
+       
     }
 
 

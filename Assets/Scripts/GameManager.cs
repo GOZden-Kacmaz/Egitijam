@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public Camera kamera2;
     public Camera kamera3;
     public Camera kamera4;
-    public GameObject ipucu;
+    public GameObject ýpucu;
+    public GameObject ýpucu2;
+    public GameObject ýpucu2tab;
     public GameObject dialog;
     public GameObject dialog2;
     public GameObject tpmenu;
