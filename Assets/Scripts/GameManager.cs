@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     public GameObject bulmaca2;
     public AudioSource ambience;
     public bool dosyatake;
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> acb38af58f44443373080c7d823c6b4541c1d377
 
     public Button[] butonlar;
     public GameObject[] plakalar;

@@ -13,6 +13,8 @@ public class player : MonoBehaviour
     private Vector2 movement;
     [SerializeField] static bool npcdegme = false;
     private bool kapýtemas = false;
+    public GameObject etuþu;
+    private bool kitablýktemas;
 
 
     public GameObject dialogmanager;
@@ -48,6 +50,11 @@ public class player : MonoBehaviour
             {
                 GameManager.tpmenu.SetActive(false);
             }
+        }
+
+        if(kitablýktemas==true && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(5);
         }
 
     }
@@ -100,6 +107,14 @@ public class player : MonoBehaviour
 
             kapýtemas = true;
         }
+        if(collision.gameObject.CompareTag("kitaplýk"))
+        {
+            etuþu.SetActive(true);
+            kitablýktemas = true;
+        }
+       
+
+
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -107,6 +122,12 @@ public class player : MonoBehaviour
         {
             kapýtemas = false;
         }
+        if (collision.gameObject.CompareTag("kitaplýk"))
+        {
+            etuþu.SetActive(false);
+            kitablýktemas=false;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
