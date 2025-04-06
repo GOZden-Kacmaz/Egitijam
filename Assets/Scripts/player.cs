@@ -76,8 +76,8 @@ public class player : MonoBehaviour
             GameManager.kamera1.enabled = false;
             GameManager.kamera4.enabled = true;
             gameObject.SetActive(false);
-            Destroy(GameManager.ýpucu);
-            GameManager.ýpucu2.SetActive(true);
+            Destroy(GameManager.ipucu);
+            GameManager.ipucu2.SetActive(true);
             
         }
 
@@ -88,11 +88,10 @@ public class player : MonoBehaviour
         }
         if (collision.CompareTag("ipucu2"))
         {
-            GameManager.ýpucu2tab.SetActive(true);
+            GameManager.ipucu2tab.SetActive(true);
         }
         if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E)&& kapýsc.final==true)
         {
-
             SceneManager.LoadScene(4);
         }
             
@@ -155,7 +154,7 @@ public class player : MonoBehaviour
         }
         if (collision.CompareTag("ipucu2"))
         {
-            GameManager.ýpucu2tab.SetActive(false);
+            GameManager.ipucu2tab.SetActive(false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
