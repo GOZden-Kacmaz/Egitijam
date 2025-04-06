@@ -101,7 +101,35 @@ public class player : MonoBehaviour
             npcdegme = false;
             GameManager.dialog.SetActive(false);
         }
-    }
-   
+        if (collision.CompareTag("kapý1"))
+        {
+        kapý.kapical = false;
+        
+        }
+        if (collision.CompareTag("kapý2"))
+        {
+            kapý.kapical = false;
 
+        }
+        if (collision.CompareTag("kapý3"))
+        {
+            kapý.kapical = false;
+
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("kapý1"))
+        {
+            kapý.kapical = true;    kapý.kapilarindex = 1;
+        }
+        if (collision.CompareTag("kapý2"))
+        {
+            kapý.kapical = true; kapý.kapilarindex = 2;
+        }
+        if (collision.CompareTag("kapý1"))
+        {
+            kapý.kapical = true; kapý.kapilarindex = 3;
+        }
+    }
 }
