@@ -81,6 +81,11 @@ public class player : MonoBehaviour
         {
             GameManager.ýpucu2tab.SetActive(true);
         }
+        if(collision.CompareTag("cam")&& Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("katilev");
+        }
+            
 
 
     }
