@@ -4,28 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/anamenu.unity
-    guid: 3e0769c1c2a602140a2574e2a2c8a0a3
-  - enabled: 1
-    path: Assets/Scenes/INTRO.unity
-    guid: 6ec7531df4ac23646b557a8e4e135343
-  - enabled: 1
-    path: Assets/Scenes/sahne 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/sokakScene.unity
-    guid: e66430c4bff7778428611f9d329a5e87
-  - enabled: 1
-    path: Assets/Scenes/katilev.unity
-    guid: d82d1dea19da4074aaba120969947da0
-=======
-    path: Assets/Scenes/katilev.unity
-    guid: d82d1dea19da4074aaba120969947da0
-  - enabled: 1
-    path: Assets/Scenes/sokakScene.unity
-    guid: e66430c4bff7778428611f9d329a5e87
->>>>>>> 3bf238e92b376d31f9eef3cae9207e50188f2b8d
+  m_Scenes: []
   m_configObjects: {}
